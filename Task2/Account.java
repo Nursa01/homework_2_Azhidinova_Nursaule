@@ -26,17 +26,21 @@ public abstract class Account {
         this.accountId = accountId;
     }
 
-    @Override
-    public String toString() {
-        return "Account [accountName=" + accountName +
-                ", accountId=" + accountId ;
-    }
-
     public double getBalance() {
         return balance;
     }
-
+    public void deposit(double count) {
+        if (count > 0) {
+            balance += count;
+        }
+    }
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+    @Override
+    public String toString() {
+        return "Account [accountName=" + accountName +
+                ", accountId=" + accountId + "balance"  + balance +
+                '}';
     }
 }

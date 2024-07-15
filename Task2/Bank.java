@@ -19,13 +19,5 @@ class Bank<T extends Account>{
             System.out.println(account);
         }
     }
-
-    public double getTotalBalance() {
-        double totalBalance = 0;
-        for (T account : accounts) {
-            totalBalance += account.getBalance();
-        }
-        return totalBalance;
-    }
 }
 
