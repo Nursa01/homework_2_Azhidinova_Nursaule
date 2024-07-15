@@ -10,10 +10,6 @@ public abstract class Account {
         this.accountId = accountId;
         this.balance = balance;
     }
-    public double getBalance(){
-        return balance;
-    }
-
     public String getAccountName() {
         return accountName;
     }
@@ -30,13 +26,17 @@ public abstract class Account {
         this.accountId = accountId;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
     @Override
     public String toString() {
         return "Account [accountName=" + accountName +
-                ", accountId=" + accountId +
-                ", balance=" + balance + "]";
+                ", accountId=" + accountId ;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

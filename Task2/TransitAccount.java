@@ -1,16 +1,11 @@
 package Task2;
 
 public class TransitAccount extends Account{
-    private double balance;
-    public TransitAccount(double balance) {
-        this.balance = balance;
+    public TransitAccount(String name, String id, double balance) {
+        super(name, id, balance);
     }
-    public double getBalance() {
-        return balance;
+    @Override
+    public String toString() {
+        return "TransitAccount{" + super.toString() + '}';
     }
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-
 }

@@ -1,14 +1,11 @@
 package Task2;
 
 public class ClosedAccount extends Account{
-    private double balance;
-    public ClosedAccount(double balance) {
-        this.balance = balance;
+    public ClosedAccount(String name, String id, double balance) {
+        super(name, id, balance);
     }
-    public double getBalance() {
-        return balance;
-    }
-    public void setBalance(double balance) {
-        this.balance = balance;
+    @Override
+    public String toString() {
+        return "ClosedAccount{" + super.toString() + '}';
     }
 }
