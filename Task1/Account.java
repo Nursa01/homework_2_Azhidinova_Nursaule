@@ -27,5 +27,9 @@ class Account implements Comparable<Account>{
             return 1;
         } return -1;
     }
+    public String toString() {
+        return "Name: " + name +
+                ", ID: " + id;
+    }
 }
 
