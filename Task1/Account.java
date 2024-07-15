@@ -23,7 +23,7 @@ class Account implements Comparable<Account>{
     public int compareTo(Account account) {
         if(id == account.getId())
         {   return 0;
-        } else if(id > account.getId()) {
+        } else if(id < account.getId()) {
             return 1;
         } return -1;
     }
