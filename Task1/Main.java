@@ -9,5 +9,10 @@ public class Main {
         accounts.add(new Account("Max", 1433));
         accounts.add(new Account("Bob", 2442));
         accounts.add(new Account("Kate", 6754));
+
+        Collections.sort(accounts);
+        for (Account account : accounts) {
+            System.out.println(account);
+        }
     }
 }

@@ -1,15 +1,15 @@
 package Task1;
 
-class Account<T extends Comparable<Account>>{
+class Account implements Comparable<Account>{
     private String name;
-    private T id;
+    private int id;
 
-    Account(String name, T id) {
+    Account(String name, int id) {
         this.name = name;
         this.id = id;
 
     }
-    public T getId() {
+    public int getId() {
         return id;
     }
     public String getName() {
@@ -19,7 +19,13 @@ class Account<T extends Comparable<Account>>{
         this.name = name;
     }
 
-    public int compareTo(T obj) {
-        return 0;
+    @Override
+    public int compareTo(Account account) {
+        if(id == account.getId())
+        {   return 0;
+        } else if(id > account.getId()) {
+            return 1;
+        } return -1;
     }
 }
+
